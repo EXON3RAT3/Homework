@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var details = Array(
+            Array(1001, "Tariq", 456, 500),
+            Array(1002, "Yasir", 356, 500),
+            Array(1003, "Umair", 256, 500),
+            Array(1004, "Zahid", 254, 500),
+            Array(1005, "Rahil", 378, 500)
+        );
+        document.write("<table border='2'><tr><th>Student ID</th><th>Name</th><th>Obtained Marks</th><th>Total Marks</th></tr>")
+        for (var i = 0; i < 5; i++)
+        {
+            document.write("<tr>");
+            for (var j = 0; j < 4; j++)
+            {
+                document.write("<td>"+details[i][j]+"</td>");
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</head>
+<body>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array to Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div id="table-container"></div>
+
+<script>
+    var data = [
+        ["StudentID", "Name", "Obtainedmarks", "fullmarks"],
+        [1001, "Tariq", 156, 500],
+        [1002, "Yasir", 456, 500],
+        [1003, "Jawad", 256, 500],
+        [1004, "Hamza", 156, 500],
+        [1005, "Zahid", 356, 500],
+
+    ];
+    var table = document.createElement("table");
+    for (var i = 0; i < data.length; i++) {
+        var row = document.createElement("tr");
+        for (var j = 0; j < data[i].length; j++) {
+            var cell;
+            if (i === 0) {
+                cell = document.createElement("th");
+            } else {
+                cell = document.createElement("td");
+            }
+            cell.textContent = data[i][j];
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+    document.getElementById("table-container").appendChild(table);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+var arth = prompt("Enter Your Arithematic Operator");
+
+        switch(arth)
+        {
+            case '+':
+                document.write("Your Arithematic Operator Addition : "+ arth);
+                break;
+            case '-':
+                document.write("Your Arithematic Operator Subtraction : "+ arth);
+                break;
+            case '*':
+                document.write("Your Arithematic Operator Multiplication : "+ arth);
+                break;
+            case '/':
+                document.write("Your Arithematic Operator Division : "+ arth);
+                break;
+            default:
+                document.write("Invalid Arithematic Operator");
+        }
+
+    </script>

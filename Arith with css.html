@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function calculate(event) {
+            event.preventDefault();
+            var num1 = parseFloat(document.querySelector('.num1').value);
+            var num2 = parseFloat(document.querySelector('.num2').value);
+            var operator = document.querySelector('.operator').value;
+            var result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+                    break;
+                default:
+                    result = 'Invalid Operation';
+            }
+
+            document.querySelector('.result').textContent = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <form onsubmit="calculate(event)">
+            <input type="number" class="num1" required>
+            <select class="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">×</option>
+                <option value="/">÷</option>
+            </select>
+            <input type="number" class="num2" required>
+            <button type="submit" class="calculate-btn">Calculate</button>
+        </form>
+        <h3>Result: <span class="result">0</span></h3>
+    </div>
+    
+</body>
+</html>

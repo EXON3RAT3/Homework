@@ -1,4 +1,12 @@
-body
+.myhead
     {
-        
+        padding: 100px;
+        background-image: url('./Asset/images/patek-philippe-logo-black-and-white.png');
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+    }
+.mag
+    {
+        margin-top: 600px;  
     }
